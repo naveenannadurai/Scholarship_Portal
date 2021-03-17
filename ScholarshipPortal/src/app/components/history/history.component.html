@@ -1,0 +1,25 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag  *ngFor = "let b of scholarship"---------->
+
+<div class="container" >
+    <h1 class="well">Scholarship Status</h1>
+    <div class="col-lg-12 well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Scholarship ID</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody  *ngFor = "let b of history">
+                <tr>
+                    <th>{{b.scholarshipId}}</th>
+                    <td>{{b.status}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

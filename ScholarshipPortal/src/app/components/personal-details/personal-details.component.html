@@ -1,0 +1,304 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<h1 class="well">Student Details</h1>
+	<div class="col-lg-12 well">
+		<div class="row">
+			<form #details='ngForm' (ngSubmit)="register(details)">
+				<div class="col-sm-12">
+					<label for=""
+						style="font-size: large; font-weight: bold; height: 2em; font-family: 'Courier New', Courier, monospace;">Academic
+						Details</label>
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<label>University Roll Number</label>
+							<input type="number" placeholder="Enter University Roll Number Here.." class="form-control"
+								name="rollno" [(ngModel)]="rollno" #roll="ngModel" pattern="[0-9]{10}" required>
+							<div class="alert alert-danger" *ngIf="roll.errors?.pattern">
+								Enter a valid roll number
+							</div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>University Name</label>
+							<input type="text" placeholder="Enter University Name Here.." class="form-control"
+								name="institute" [(ngModel)]="institute" #inst="ngModel" pattern="[a-zA-Z][a-zA-Z ]+"
+								required>
+							<div class="alert alert-danger" *ngIf="inst.errors?.pattern">
+								Only Alphabets
+							</div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>Course Name</label>
+							<input type="text" placeholder="Enter Course Name Here.." class="form-control" name="course"
+								[(ngModel)]="course" #cours="ngModel" pattern="[a-zA-Z][a-zA-Z ]+" required>
+							<div class="alert alert-danger" *ngIf="cours.errors?.pattern">
+								Only Alphabets
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<label>Mode Of Study</label>
+							<select class="form-control" name="mode" [(ngModel)]="mode" aria-placeholder="Select">
+								<option value="Regular/Full-Time">Regular/Full-Time</option>
+								<option value="Part-Time">Part-Time</option>
+							</select>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>Current Year</label>
+							<select class="form-control" name="year" [(ngModel)]="year" aria-placeholder="Select">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>CGPA</label>
+							<input type="number" placeholder="Enter CGPA Here.." class="form-control" name="cgpa"
+								[(ngModel)]="cgpa" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<label>10th Roll Number</label>
+							<input type="number" placeholder="Enter 10th Roll Number Here.." class="form-control"
+								name="sslcrollno" [(ngModel)]="sslcrollno" #sslcroll="ngModel" pattern="[0-9]{10}"
+								required>
+							<div class="alert alert-danger" *ngIf="sslcroll.errors?.pattern">
+								Enter a valid roll number
+							</div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>10th Board Name</label>
+							<input type="text" placeholder="Enter 10th Board Name Here.." class="form-control"
+								name="sslcboard" [(ngModel)]="sslcboard" #sslcboard1="ngModel"
+								pattern="[a-zA-Z][a-zA-Z ]+" required>
+							<div class="alert alert-danger" *ngIf="sslcboard1.errors?.pattern">
+								Only Alphabets
+							</div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>10th year of Passing</label>
+							<input type="number" placeholder="Enter 10th year of Passing Here.." class="form-control"
+								name="sslcyear" [(ngModel)]="sslcyear" #sslcyear1="ngModel"
+								required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label>10th Percentage</label>
+							<input type="number" placeholder="Enter 10th Percentage Here.." class="form-control"
+								name="sslcperc" [(ngModel)]="sslcperc" #sslcperc1="ngModel" min="60" max="100" required>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label>12th Percentage</label>
+							<input type="number" placeholder="Enter 12th Percentage Here.." class="form-control"
+								name="hscperc" [(ngModel)]="hscperc" #hscperc1="ngModel" min="60" max="100" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<label>12th Roll Number</label>
+							<input type="number" placeholder="Enter 12th Roll Number Here.." class="form-control"
+								name="hscroll" [(ngModel)]="hscroll" #hscroll1="ngModel" pattern="[0-9]{10}" required>
+							<div class="alert alert-danger" *ngIf="hscroll1.errors?.pattern">
+								Enter a valid roll number
+							</div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>12th Board Name</label>
+							<input type="text" placeholder="Enter 12th Board Name Here.." class="form-control"
+								name="hscboard" [(ngModel)]="hscboard" #hscboard1="ngModel" pattern="[a-zA-Z][a-zA-Z ]+"
+								required>
+							<div class="alert alert-danger" *ngIf="hscboard1.errors?.pattern">
+								Only Alphabets
+							</div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>12th year of Passing</label>
+							<input type="number" placeholder="Enter 12th year of Passing Here.." class="form-control"
+								name="hscyear" [(ngModel)]="hscyear" #hscyear1="ngModel"
+								required>
+						</div>
+					</div>
+					<hr style="border: 0.1px dotted lightgrey;">
+					<label for=""
+						style="font-size: large; font-weight: bold; height: 2em; font-family: 'Courier New', Courier, monospace;">Personal
+						Details</label>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label>Father's Name</label>
+							<input type="text" placeholder="Enter Father's Name Here.." class="form-control"
+								name="father" [(ngModel)]="father" #father1="ngModel" pattern="[a-zA-Z][a-zA-Z ]+"
+								required>
+							<div class="alert alert-danger" *ngIf="father1.errors?.pattern">
+								Only Alphabets
+							</div>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label>Mother's Name</label>
+							<input type="text" placeholder="Enter Mother's Name Here.." class="form-control"
+								name="mother" [(ngModel)]="mother" #mother1="ngModel" pattern="[a-zA-Z][a-zA-Z ]+"
+								required>
+							<div class="alert alert-danger" *ngIf="mother1.errors?.pattern">
+								Only Alphabets
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Phone Number</label>
+						<input type="number" placeholder="Enter Phone Number Here.." class="form-control" name="phone"
+							[(ngModel)]="phone" #phone1="ngModel" pattern="[6789][0-9]{9}" required>
+						<div class="alert alert-danger" *ngIf="phone1.errors?.pattern">
+							Enter a valid number
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label>Religion</label>
+							<select class="form-control" name="religion" [(ngModel)]="religion"
+								aria-placeholder="Select">
+								<option value="Hindu">Hindu</option>
+								<option value="Muslim">Muslim</option>
+								<option value="Christian">Christian</option>
+								<option value="Sikhism">Sikhism</option>
+								<option value="Buddhism ">Buddhism</option>
+								<option value="Jainism">Jainism</option>
+							</select>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label>Community</label>
+							<select class="form-control" name="Community" [(ngModel)]="community"
+								aria-placeholder="Select">
+								<option value="OC">Open Category</option>
+								<option value="BC">Backward Class</option>
+								<option value="MBC">Most Backward Class</option>
+								<option value="SC">Scheduled Caste</option>
+								<option value="ST">Scheduled Tribes</option>
+							</select>
+						</div>
+					</div>
+						<div class="form-group">
+							<label>Accomodation&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="Accomodation" id="Hostel"
+									value="Hostel" [(ngModel)]="Accomodation" required>
+								<span class="form-check-label"> Hostel </span>
+							</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="DayScholar" name="Accomodation"
+									value="DayScholar" [(ngModel)]="Accomodation">
+								<span class="form-check-label"> DayScholar</span>
+							</label>
+						</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label>Aadhar Number</label>
+							<input type="number" class="form-control" id="aadhar" placeholder="Enter Aadhar Number"
+								[(ngModel)]="aadhar_no" name="aadhar_no" pattern="[2-9]{1}[0-9]{11}" #a1="ngModel"
+								required>
+
+							<div class="error" *ngIf="a1.errors?.pattern">
+								Enter Valid Aadhar Number
+							</div>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label>Annual Income</label>
+							<input type="number" class="form-control" id="monthlyIncome"
+								placeholder="Enter your Monthly Income" [(ngModel)]="monthincome" name="MonthlyIncome"
+								required>
+						</div>
+					</div>
+					<hr style="border: 0.1px dotted lightgrey;">
+					<label for=""
+						style="font-size: large; font-weight: bold; height: 2em; font-family: 'Courier New', Courier, monospace;">Basic
+						Details</label>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label class="form-check form-check-inline">Orphan</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="orphan" id="yes" value="Yes"
+									[(ngModel)]="orphan" required>
+								<span class="form-check-label"> Yes </span>
+							</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="No" name="orphan" value="No"
+									[(ngModel)]="orphan">
+								<span class="form-check-label"> No</span>
+							</label>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label class="form-check form-check-inline">Maritial Status</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="Maritial" id="Married"
+									value="Married" [(ngModel)]="Maritial" required>
+								<span class="form-check-label"> Married </span>
+							</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="Single" name="Maritial" value="Single"
+									[(ngModel)]="Maritial">
+								<span class="form-check-label"> Single</span>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label class="form-check form-check-inline">Disability</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="dis" id="yes" value="Yes"
+									[(ngModel)]="dis" required>
+								<span class="form-check-label"> Yes </span>
+							</label>
+							<label class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="No" name="dis" value="No"
+									[(ngModel)]="dis">
+								<span class="form-check-label"> No</span>
+							</label>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label>Disability Percentage</label>
+							<input type="number" placeholder="Enter Disability Percentage Here.." class="form-control"
+								name="disper" [(ngModel)]="disper" #disper1="ngModel" required>
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label>Parent's Profession</label>
+						<input type="text" placeholder="Enter Parent's Profession Here.." class="form-control"
+							name="Proffesion" [(ngModel)]="Profession" #prof="ngModel" pattern="[a-zA-Z][a-zA-Z ]+"
+							required>
+						<div class="alert alert-danger" *ngIf="prof.errors?.pattern">
+							Only Alphabets
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label>IFSC Code</label>
+							<input type="text" placeholder="Enter IFSC Code Here.." class="form-control"
+								pattern="[A-Z]{4}0[A-Z0-9]{6}" name="ifsc" [(ngModel)]="ifsc" #ifsc1="ngModel" required>
+							<div class="alert alert-danger" *ngIf="ifsc1.errors?.pattern">
+								Enter a valid ifsc code
+							</div>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label>Account Number</label>
+							<input type="text" placeholder="Enter Account Number Here.." class="form-control"
+								name="account" [(ngModel)]="account" #account1="ngModel" pattern="[0-9]{9,18}" required>
+							<div class="alert alert-danger" *ngIf="account1.errors?.pattern">
+								Enter a valid account number
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-lg btn-info" [disabled]=details.invalid>Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>

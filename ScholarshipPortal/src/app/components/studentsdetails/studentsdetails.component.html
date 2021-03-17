@@ -1,0 +1,208 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <h1 class="well">Student Details</h1>
+    <div class="col-lg-12 well">
+        <table class="table table-striped table-secondary" >
+            <tbody *ngFor = "let b of list1">
+            <tr>
+                <td>Student Application Number </td>
+                <td>{{b.applicationNumber}}</td>
+            </tr>
+             
+            <tr>
+                <td>Student Name </td>
+                <td>{{b.firstName}} {{b.lastName}}</td>
+            </tr>
+             
+            <tr>
+                <td>Student Gender </td>
+                <td>{{b.gender}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Student DOB </td>
+                <td>{{b.birth | date:'fullDate'}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Student Email</td>
+                <td>{{b.email}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Student City</td>
+                <td>{{b.city}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Student State</td>
+                <td>{{b.state}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Student Country</td>
+                <td>{{b.country}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Student Pincode</td>
+                <td>{{b.pincode}}</td>
+            </tr> 
+        </tbody>   
+        <tbody *ngFor = "let c of list2">
+            <tr>
+                <td>Student Phone Number</td>
+                <td>{{c.phone}}</td>
+            </tr>    
+             
+            <tr>
+                <td>Student Aadhar Number</td>
+                <td>{{c.aadhar}}</td>
+            </tr>
+             
+            <tr>
+                <td>Student Religion</td>
+                <td>{{c.religion}} </td>
+            </tr>
+             
+            <tr>
+                <td>Student Community</td>
+                <td>{{c.community}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Father's Name</td>
+                <td>{{c.fatherName}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Mother's Name</td>
+                <td>{{c.motherName}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Parent Profession</td>
+                <td>{{c.parentProfession}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Annual Income</td>
+                <td>{{c.income}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Accomodation</td>
+                <td>{{c.stay}}</td>
+            </tr> 
+             
+            <tr>
+                <td>College Roll Number</td>
+                <td>{{c.rollNo}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Institute Name</td>
+                <td>{{c.institute}}</td>
+            </tr>
+             
+            <tr>
+                <td>Course</td>
+                <td>{{c.course}}</td>
+            </tr>
+             
+            <tr>
+                <td>Current Year</td>
+                <td>{{c.year}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Mode Of Study</td>
+                <td>{{c.modeOfStudy}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Last Semester CGPA</td>
+                <td>{{c.cgpa}}</td>
+            </tr> 
+             
+            <tr>
+                <td>SSLC Roll Number</td>
+                <td>{{c.sslcRollno}}</td>
+            </tr> 
+             
+            <tr>
+                <td>SSLC Board Name</td>
+                <td>{{c.sslcExamName}}</td>
+            </tr> 
+             
+            <tr>
+                <td>SSLC Passing Year</td>
+                <td>{{c.sslcPassingYear}}</td>
+            </tr>
+             
+            <tr>
+                <td>SSLC Percentage</td>
+                <td>{{c.sslcPercentage}}</td>
+            </tr>
+             
+            <tr>
+                <td>HSC Roll Number</td>
+                <td>{{c.hscRollno}}</td>
+            </tr> 
+             
+            <tr>
+                <td>HSC Board Name</td>
+                <td>{{c.hscExamName}}</td>
+            </tr> 
+             
+            <tr>
+                <td>HSC Passing Year</td>
+                <td>{{c.hscPercentage}}</td>
+            </tr>
+             
+            <tr>
+                <td>HSC Percentage</td>
+                <td>{{c.hscPassingYear}}</td>
+            </tr>
+             
+            <tr>
+                <td>IsOrphan</td>
+                <td>{{c.orphan}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Is Disabled</td>
+                <td>{{c.disabled}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Disabled Percentage</td>
+                <td>{{c.disabledpercentage}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Marital Status</td>
+                <td>{{c.maritalStatus}}</td>
+            </tr> 
+             
+            <tr>
+                <td>IFSC Code</td>
+                <td>{{c.ifsc}}</td>
+            </tr> 
+             
+            <tr>
+                <td>Account Number</td>
+                <td>{{c.accountNumber}}</td>
+            </tr> 
+             
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+<br>

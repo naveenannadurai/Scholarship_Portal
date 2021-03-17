@@ -1,0 +1,41 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container new login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Admin</h3>
+                    <form #admin='ngForm' (ngSubmit)="alogin(admin)">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter Your Email *" value="" name="emailId" 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" #email="ngModel" [(ngModel)]="emailId" >
+                            <div class="alert alert-danger" *ngIf="email.errors?.pattern">
+                              Enter valid Email address
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Submit" />
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Student</h3>
+                    <form #student='ngForm' (ngSubmit)="slogin(student)">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter Your Email *" value="" name="emailId1" 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" #email1="ngModel" [(ngModel)]="emailId1" >
+                            <div class="alert alert-danger" *ngIf="email1.errors?.pattern">
+                              Enter valid Email address
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,218 @@
+.content
+{
+  margin: 8% 18% -24% 33%;
+  align-self: center;
+  padding: 5% 0% 3% 3%;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  height: 60%;
+  width: 50%;
+  border-radius: 20px;
+  background:url(https://mitwpu.edu.in/wp-content/uploads/2018/02/95b04989b71b9375d9d04c3ee50cfc05-abstract-white-background-or-backdrop.jpg) no-repeat center ;
+
+}
+.marquee h4 {
+  padding: 0 0 10px 0px;
+    background: #e7395e;
+    margin: 0px -15px 0px -15px;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.col-md-3 {
+  width: 22%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  margin: 0% 0% 0% 2%;
+  padding-left: 15px;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  background:url(https://mitwpu.edu.in/wp-content/uploads/2018/02/95b04989b71b9375d9d04c3ee50cfc05-abstract-white-background-or-backdrop.jpg) no-repeat center ;
+}
+.marquee {
+  padding: 0 0 10px 0;
+  margin-bottom: 10px;
+  height: 330px;
+}
+.marquee-content {
+  padding: 15px 12px 2px 12px;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-bullhorn {
+  margin-top: 0;
+  font-size: 23px !important;
+}
+.title
+{
+  font-family: Baskerville;
+  color: black;
+  font-size: 45px;
+  margin: 5px 0;
+}
+.tagline
+{
+  font-family: Baskerville;
+  color: rgb(28, 23, 104);
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.subtitle
+{
+  margin: 0 0 15px;
+  font-family: Baskerville;
+  color: black;
+  font-size: 30px
+}
+
+a{
+  text-decoration: none;
+}
+
+.about-content
+{
+  margin: 0 3em;
+  font-size: 10px;
+  color: rgb(239, 248, 200);
+  font-family: "Noto Sans Glagolitic";
+
+}
+/*try*/
+.item-1, 
+.item-2, 
+.item-3 ,
+.item-4{
+  align-content: center;
+	position: absolute;
+  display: block;
+	 top: 22em; 
+  
+  width: 60%;
+  
+  font-size: 2em;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+.item-4{
+	animation-name: anim-4;
+}
+
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  96.66%,100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-4 {
+	0%, 96.66% { left: -100%; opacity: 0; }
+  108.29%, 124.95% { left: 25%; opacity: 1; }
+  126.66%,100% { left: 110%; opacity: 0; }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    font-size: 25px;
+    width: 8em;
+    height: 2em;
+    color:  orange;
+    border-left: 0.08em solid;
+    position: relative;
+    margin-top: 0.8em;
+    cursor: pointer;
+}
+
+li::before,
+li::after
+ {
+    content: '';
+    position: absolute;
+    width: inherit;
+    border-left: inherit;
+    z-index: -1;
+}
+
+li::before {
+    height: 80%;
+    top: 10%;
+    left: calc(-0.15em - 0.08em * 2);
+    filter: brightness(0.8);
+}
+
+li::after {
+    height: 60%;
+    top: 20%;
+    left: calc(-0.15em * 2 - 0.08em * 3);
+    filter: brightness(0.6);
+}
+
+li span {
+    position: relative;
+    height: 120%;
+    top: -10%;
+    box-sizing: border-box;
+    border: 0.08em solid;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
+    transition: 0.3s;
+}
+
+li:hover span {
+    transform: translateX(0.15em);
+}
+

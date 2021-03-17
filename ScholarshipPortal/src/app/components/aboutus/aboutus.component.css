@@ -1,0 +1,64 @@
+.content
+{
+  display: flex;
+  flex-direction: column;
+  margin: 3% 18% 0%;
+  align-self: center;
+  padding: 0% 3% 0%;
+  background: rgba(255, 255, 255, 0.616);
+  text-align: left;
+  text-size-adjust: 100px;
+  color: black;
+  border-radius: 20px;
+  height: 60%;
+
+}
+.features
+{
+	text-align: center;
+}
+
+.features h1
+{
+	display: inline-block;
+	text-transform: uppercase;
+	border-bottom: 4px solid #e7395e;
+}
+
+.cen
+{
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.feature
+{
+	display: inline-block;
+	width: calc(100%/3);
+	margin: -15px -4px -1.5px 3px;
+	padding: 20px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: 0.4s;
+}	
+
+.feature:hover
+{
+	background: #e7395e;
+}
+
+.feature h2
+{
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.feature p
+{
+	color: black;
+	font-size: 15px;
+	font-weight: 500;
+}

@@ -1,0 +1,50 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <h1 class="well">Scholarship Form</h1>
+    <div class="col-lg-12 well">
+        <form #details='ngForm' (ngSubmit)="register(details)">
+            <div class="form-group">
+                <label>Scholarship Name</label>
+                <input type="text" placeholder="Enter Scholarship Name Here.." class="form-control" name="name"
+                    [(ngModel)]="name" #roll="ngModel" pattern="[a-zA-Z][a-zA-Z ]+" required>
+                <div class="alert alert-danger" *ngIf="roll.errors?.pattern">
+                    Only Alphabets
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Scholarship Description</label>
+                <input type="text"  placeholder="Enter Scholarship Description Here.." class="form-control"
+                    name="description" [(ngModel)]="description" #inst="ngModel" pattern="[a-zA-Z][a-zA-Z ]+" required>
+                <div class="alert alert-danger" *ngIf="inst.errors?.pattern">
+                    Only Alphabets
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Provider Name</label>
+                <input type="text" placeholder="Enter Provider Name Here.." class="form-control" name="provider"
+                    [(ngModel)]="provider" #cours="ngModel" pattern="[a-zA-Z][a-zA-Z ]+" required>
+                <div class="alert alert-danger" *ngIf="cours.errors?.pattern">
+                    Only Alphabets
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label>Amount</label>
+                <input type="number" placeholder="Enter Amount Here.." class="form-control" name="amount"
+                    [(ngModel)]="amount" #sslcroll="ngModel" required>
+            </div>
+            <div class="form-group">
+                <label>Requirements</label>
+                <input type="text" placeholder="Enter Requirements Here.." class="form-control" name="requirements"
+                    [(ngModel)]="requirements" #sslcboard1="ngModel"  required>
+            </div>
+            <button type="submit" class="btn btn-lg btn-info" [disabled]=details.invalid>Submit</button>
+
+        </form>
+    </div>
+</div>
