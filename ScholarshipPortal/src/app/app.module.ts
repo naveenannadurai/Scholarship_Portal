@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ParticlesModule } from 'angular-particle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,7 +57,8 @@ import { ForgetComponent } from './components/forget/forget.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

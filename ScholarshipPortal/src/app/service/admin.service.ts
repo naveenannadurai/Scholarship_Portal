@@ -9,7 +9,7 @@ export class AdminService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl='http://localhost:8182/';
+  baseUrl='http://localhost:8765/admin/';
 
   getlist():Observable<any>{
     return this.http.get(this.baseUrl+'getScholarshipList');

@@ -51,13 +51,13 @@
 .menu-item:hover
 {
   transform: scale(1.1);
-  color: rgb(40, 233, 201);
+  color: #2c2d5f;
 }
 
 .login
 {
-  color:black;
-  background-color:#e7395e;
+  color:white;
+  background-color:#2c2d5f;
   font-family: Futura;
   width: max-content;
   float: right;
@@ -74,8 +74,8 @@
 }
 .login:hover
 {
-  background-color:rgb(212, 7, 7);
-  color:black;
+  background-color:rgb(146, 152, 196);
+  color:orange;
   transform: scale(1.1);
   opacity: 1;
 }

@@ -8,7 +8,6 @@
   background: rgba(255, 255, 255, 0.616);
   text-align: left;
   text-size-adjust: 100px;
-  color: black;
   border-radius: 20px;
   height: 60%;
 
@@ -22,7 +21,7 @@
 {
 	display: inline-block;
 	text-transform: uppercase;
-	border-bottom: 4px solid #e7395e;
+	border-bottom: 4px solid #2c2d5f;
 }
 
 .cen
@@ -46,7 +45,8 @@
 
 .feature:hover
 {
-	background: #e7395e;
+	background: #2c2d5f;
+	color: white;
 }
 
 .feature h2
@@ -58,7 +58,6 @@
 
 .feature p
 {
-	color: black;
 	font-size: 15px;
 	font-weight: 500;
 }

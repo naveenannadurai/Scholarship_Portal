@@ -9,7 +9,7 @@ export class StudentService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl='http://localhost:8181/';
+  baseUrl='http://localhost:8765/student/';
 
   registerStudent(student : object):Observable<any>{
     // alert(JSON.stringify(student))

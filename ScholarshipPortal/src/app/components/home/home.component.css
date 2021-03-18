@@ -13,9 +13,10 @@
 }
 .marquee h4 {
   padding: 0 0 10px 0px;
-    background: #e7395e;
+    background: #2c2d5f;
     margin: 0px -15px 0px -15px;
     color: #fff;
+    align-content: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -43,13 +44,15 @@
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
+  align-content: center;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .fa-bullhorn {
-  margin-top: 0;
+  margin-top: 40px;
+  align-content: center;
   font-size: 23px !important;
 }
 .title
@@ -202,14 +205,15 @@ li span {
     top: -10%;
     box-sizing: border-box;
     border: 0.08em solid;
-    background-color: #333;
+    background-color: #2c2d5f;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
     text-transform: capitalize;
     transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
-    transition: 0.3s;
+    transition: 0.5s;
+    border-radius: 10px;
 }
 
 li:hover span {

@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "Authorization"
+      routes:
+      - id: Student
+        uri: http://localhost:8181/
+        predicates:
+        - Path=/student/**
+      - id: Admin
+        uri: http://localhost:8182/
+        predicates:
+        - Path=/admin/**
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
